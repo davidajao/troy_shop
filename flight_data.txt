@@ -1,0 +1,25 @@
+NV125|Nashville|Los Angeles
+NV112|Nashville|Seattle
+NV101|Nashville|Miami
+NV430|Nashville|Houston
+NV121|Nashville|Atlanta
+TR544|Troy|Seattle
+TR111|Troy|Los Angeles
+TR123|Troy|Miami
+TR909|Troy|Houston
+TR604|Troy|Dallas
+MG103|Montgomery|Miami
+MG203|Montgomery|Atlanta
+MG332|Montgomery|Los Angeles
+MG423|Montgomery|Troy
+MG223|Montgomery|Houston
+AT235|Atlanta|Houston
+AT135|Atlanta|Miami
+AT835|Atlanta|Seattle
+AT505|Atlanta|Los Angeles
+AT201|Atlanta|Dallas
+NY789|New York|Dallas
+NY202|New York|Houston
+NY104|New York|Troy
+NY202|New York|Los Angeles
+NY332|New York|Atlanta

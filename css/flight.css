@@ -1,0 +1,80 @@
+#top{
+    width: 95%;
+    height: 60px;
+    border-bottom: 2px solid;
+    margin: auto;
+    padding-top: 25px;
+    text-align: right;
+}
+
+#top, a{
+    cursor: pointer;
+}
+
+a:hover{
+    color: rgb(177, 173, 173);
+}
+
+.navbar{
+    margin-bottom: 20px;
+}
+
+.nav-link{
+    padding-top: 20px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid rgb(206, 204, 204);
+    width: 70%;
+    padding-left: 0px;
+    margin-left: 30px;
+}
+
+#map{
+    width: 50%; 
+    height: 400px; 
+    background: grey
+}
+
+#login{
+    margin-top:40px;
+}
+
+.form-signin .form-label-group{
+    margin-bottom: 50px;
+}
+
+.center{
+    margin: auto;
+    width: 60%;
+}
+
+.blue_border {
+    margin: auto;
+    width: 60%;
+    border: 3px solid rgb(64, 152, 235);
+    padding: 80px;
+    margin-top: 100px;
+}
+
+.plane_parallax{
+    margin-top: 40px;
+    height: 550px;
+    background-image: url(images/plane.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#slideShow{
+}
+
+#navigate{
+    width:90%;
+    margin: auto;
+}
+
+#categories{
+    margin-left: 80px;
+    position: fixed;
+}
