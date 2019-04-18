@@ -6,16 +6,18 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="css/custom.css">
         <link rel="stylesheet" type="text/css" href="fontawesome-free-5.1.1-web/css/all.min.css">
-        <title> TROY MARKETPLACE</title>
+        <title> TROY MARKETPLACE </title>
     </head>
         
     <body>
         <div id="top"> 
+            <a href="view_saved.php"><i class="fas fa-heart"></i> Saved items &emsp; </a>
             <a href="sell.php">Sell an Item</a> &nbsp; &nbsp; &nbsp;
-            <a href="login_form.php">Log In</a>
+            <a href="my_profile.php"> My profile &emsp; </a>
+            <a href="logout.php">Log Out</a>
         </div>
 
-<!---
+        <!--
         <div class="wideScreen">
                 <nav id="navigate" class="navbar navbar-light bg-light">
                         <a class="navbar-brand">Navbar</a>
@@ -26,14 +28,14 @@
                 </nav>
         
                 <nav id="categories" class="nav flex-sm-column col-sm-2">
-                    <a class="nav-link active" href="#">Home</a>
-                    <a class="nav-link" href="#">Textbooks</a>
+                    <a class="nav-link active" href="profile.php">Home</a>
+                    <a class="nav-link" href="view_textbooks.php">Textbooks</a>
                     <a class="nav-link" href="#">Devices</a>
                     <a class="nav-link" href="#">Services</a>
                     <a class="nav-link disabled" href="#">Disabled</a>
                 </nav>
         </div>
--->
+        -->
 
         <div class="smallScreen" >
             <nav id="navigate" class="navbar navbar-expand-lg navbar-light bg-light">
@@ -64,43 +66,6 @@
                         </div>
             </nav>
         </div>
-
-        <div class="container">
-            <div class="head">
-                <h3 class=>Welcome</h3>
-
-                <h2>Buy and Sell Textbooks on Campus!</h2>
-            </div>
-                <div id="slideShow" class="carousel slide carousel-fade" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                        <img src="images/textbooks.jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/games.jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/suits.jpg" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-        
-                    <a class="carousel-control-prev" href="#slideShow" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#slideShow" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-        
-            
-            </div>
-        
-
-        <script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>  
-        <script src="js/store.js"></script>
-    </body>
-</html>
+        <div class="container border">
+                <br/>
+                <h3 style="text-align: center" >Welcome : <i><?php echo strtoupper($login_session); ?></i> </h3>

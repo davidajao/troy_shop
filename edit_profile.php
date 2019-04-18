@@ -1,39 +1,50 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="css/custom.css">
-        <link rel="stylesheet" type="text/css" href="fontawesome-free-5.1.1-web/css/all.min.css">
-        <title> TROY MARKETPLACE </title>
-  </head>
+<?php
+include('session.php');
+include('header.php');
 
-  <body>
 
-    <div class="wrapper">
-        <div id="login" class="container">
-            <form class="blue_border center" action="register.php" method="POST">
+$sql = "SELECT * FROM customers where userID='$sessionID'";
+$result = $db->query($sql);
+
+while($row = mysqli_fetch_array($result))
+{ 
+$fname=$row['first_name'];
+$lname=$row['last_name'];
+$email=$row['email'];
+$phone=$row['phone'];
+$carrier=$row['carrier'];
+$street=$row['street'];
+$city=$row['city'];
+$state=$row['state'];
+$zip=$row['zip'];
+}
+?>
+
+<div class="container">
+    <h2 style="text-align:center;">MY PROFILE</h2>          
+    <div id="login" class="container">
+            <form class="blue_border center" action="update_profile.php" method="POST">
                 <div id="details" >
                     <div class="form-group">
                         <label>First Name:</label>
-                        <input type="text" class="form-control" name="first_name" required>	
+                        <input type="text" class="form-control" name="first_name"  value="<?php echo $fname ?>" required>	
                     </div>
                     <div class="form-group">
                         <label>Last Name:</label>
-                        <input type="text" class="form-control" name="last_name" required>	
+                        <input type="text" class="form-control" name="last_name" value="<?php echo $lname ?>" required>	
                     </div>
                     <div class="form-group">
                         <label>Email:</label>
-                        <input type="email" class="form-control" name="email" required>
+                        <input type="email" class="form-control" name="email" value="<?php echo $email ?>" required>
                     </div>
                     <div class="form-group">
                         <label>Phone:</label>
-                        <input type="text" class="form-control" name="phone" required>
+                        <input type="text" class="form-control" name="phone" value="<?php echo $phone ?>" required>
                     </div>
                     <div class="form-group">
                         <label>Phone Carrier:</label>
                         <select class="form-control" name="carrier" required>
-                            <option value=""></option>
+                            <option></option>
                             <option value="V">Verizon</option>
                             <option value="T">T-mobile</option>
                             <option value="AT">AT&T</option>
@@ -43,16 +54,16 @@
                     </div>
                     <div class="form-group">
                         <label>Street address:</label>
-                        <input type="text" class="form-control" name="street" required>
+                        <input type="text" class="form-control" name="street" value="<?php echo $street ?>" required>
                     </div>
                     <div class="form-group">
                         <label>City:</label>
-                        <input type="text" class="form-control" name="city" required>
+                        <input type="text" class="form-control" name="city" value="<?php echo $city ?>" required>
                     </div>
                     <div class="form-group">
                         <label>State:</label>
                         <select class="form-control" placeholder="State" name="state" required>
-                                    <option value=""></option>
+                                    <option value="<?php echo $state ?>"><?php echo $state ?></option>
                                     <option value="AL">Alabama</option>
                                     <option value="AK">Alaska</option>
                                     <option value="AZ">Arizona</option>
@@ -108,31 +119,18 @@
                     </div>
                     <div class="form-group">
                         <label>Zip code:</label>
-                        <input type="text" class="form-control" placeholder="" name="zip" required>	
+                        <input type="text" class="form-control" placeholder="" name="zip" value="<?php echo $zip ?>" required>	
                     </div>
                 </div>
 
-                <div id="pass">
-                    <div class="form-group">
-                        <label>Password:</label>
-                        <input id="password0" type="password" class="form-control" name="password0" required>	
-                    </div>
-                    <div class="form-group">
-                        <label>Re-enter Password:</label>
-                        <input id="password1" type="password" class="form-control" name="password1" required>
-                    </div>
-                    <div id="message"></div>
-                    <br/>
-                    <input id="submitSignUp" class="btn btn-lg btn-primary btn-block" type="submit" name="submit" value="Submit">
-                </div>
+                
+                <input class="btn btn-lg btn-primary btn-block" type="submit" name="submit" value="Update">
                      
             </form>
         </div>
-    </div>
-  
-    <script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>  
-    <script src="js/store.js"></script>
-</body>
-</html>
+</div>
+
+
+<?php
+include('footer.php');
+?>

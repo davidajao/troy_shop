@@ -1,0 +1,125 @@
+#top{
+    width: 95%;
+    height: 60px;
+    border-bottom: 2px solid rgb(64, 152, 235);
+    margin: auto;
+    padding-top: 25px;
+    text-align: right;
+}
+
+#top, a{
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(177, 173, 173);
+    text-decoration: none;
+}
+
+.navbar{
+    margin-bottom: 20px;
+}
+
+.nav-link{
+    padding-top: 20px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid rgb(64, 152, 235);
+    width: 70%;
+    padding-left: 0px;
+    margin-left: 30px;
+}
+
+#map{
+    width: 50%; 
+    height: 400px; 
+    background: grey
+}
+
+#login{
+    margin-top:40px;
+}
+
+.form-signin .form-label-group{
+    margin-bottom: 50px;
+}
+
+.center{
+    margin: auto;
+    width: 60%;
+}
+
+.blue_border {
+    margin: auto;
+    width: 60%;
+    border: 3px solid rgb(64, 152, 235);
+    padding: 80px;
+    margin-top: 100px;
+}
+
+.plane_parallax{
+    margin-top: 40px;
+    height: 550px;
+    background-image: url(images/plane.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carousel-item{
+    height: 500px;
+}
+
+#navigate{
+    width:90%;
+    margin: auto;
+}
+
+#categories{
+    margin-left: 80px;
+    position: fixed;
+}
+
+.row .col-md-4 .card{
+    margin-top: 30px;
+}
+
+.card-img-top{
+    height: 250px;
+}
+
+.details-img{
+    height: 100%;
+    max-width: 400px;
+}
+
+.head{
+    border: 2px solid rgb(64, 152, 235);
+    /*background-color: rgb(64, 152, 235); */
+    color: rgb(64, 152, 235);
+    text-align: center;
+    padding: 20px;
+}
+
+.border{
+    border: 3px solid rgb(64, 152, 235);
+}
+
+#sort{
+    margin-top: 20px;
+}
+
+#profile-table{
+    padding:100px;
+}
+
+
+#about{
+    font-family: "Lucida Console", Times, serif;
+    border: 5px solid rgb(64, 152, 235);
+    font-size: 24px;
+    padding:40px;
+}

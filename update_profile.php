@@ -13,18 +13,11 @@
 
             <?php
 
-            require("connection.php");
-
-            $db = new mysqli("localhost", "root", "pwdpwd", "shop1");
-            if (!$db) {
-                echo "Sorry, there was a problem connecting";
-                exit;
-            }
+            include("session.php");
             
             //when form is submitted
             if(isset($_POST['submit'])){ 
 
-                $password =         $_POST['password1'];
                 $first_name =       $_POST['first_name'];
                 $last_name =        $_POST['last_name'];
                 $email =            $_POST['email'];
@@ -35,24 +28,28 @@
                 $state =            $_POST['state'];
                 $zip =              $_POST['zip'];
 
-                //echo 'DONE <br/>'; 
+                echo 'DONE <br/>'; 
                 
-                $query = "INSERT INTO customers (password, first_name, last_name, email, phone, carrier, street, city, state, zip)
-                          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-                $dbstmt = $db->prepare($query);
-
-                $dbstmt->bind_param('ssssssssss', $password, $first_name, $last_name,  $email, $phone, $carrier, $street, $city, $state, $zip);
-
-                if ($dbstmt->execute()){
-                    echo '<p>INSERTED INTO TABLE SUCCESSFULLY </p>';
-                    header("location: login_form.php"); // Redirecting To login Page
+                $sql = "UPDATE customers 
+                            SET 
+                                first_name = '$first_name',
+                                last_name = '$last_name', 
+                                email = '$email', 
+                                phone = '$phone', 
+                                carrier = '$carrier', 
+                                street = '$street', 
+                                city = '$city', 
+                                state = '$state', 
+                                zip = '$zip'
+                          WHERE userID = $sessionID";
+               
+               if ($db->query($sql) === TRUE) {
+                    echo "Record updated successfully";
+                    header("location: my_profile.php");
+                } else {
+                    echo "Error updating record: " . $db->error;
                 }
-                else{
-                    //echo '<p>NOT INSERTED INTO TABLE </p>'. mysqli_error($db);
-                    if (mysqli_errno($db) == 1062) {
-                        header('location:email_exists.php');
-                    }
-                }
+
             }
 
             ?>
